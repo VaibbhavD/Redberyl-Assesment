@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, IconButton, Paper } from "@mui/material";
+import { Box, Typography, IconButton } from "@mui/material";
 import { IoIosArrowForward } from "react-icons/io";
 import { ShowStatus, STATUSES } from "../../utils/ShowStatus";
 

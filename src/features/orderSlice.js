@@ -21,7 +21,6 @@ const orderSlice = createSlice({
   reducers: {
     addOrder: (state, action) => {
       state.orders.push(action.payload);
-      state.filteredOrders = [...state.orders];
       saveToLocalStorage(state.orders);
     },
   }

@@ -41,7 +41,7 @@ export const OrderList = [
     expectedDate: "2022-11-01",
     completionDate: "2022-11-10",
     serviceLevel: "Premium",
-    Country: "Canada",
+    country: "Canada",
   },
   {
     id: 277541,
@@ -55,7 +55,7 @@ export const OrderList = [
     expectedDate: "2015-11-01",
     completionDate: "2015-11-10",
     serviceLevel: "Premium",
-    Country: "USA",
+    country: "USA",
   },
   {
     id: 2679545,
@@ -69,7 +69,7 @@ export const OrderList = [
     expectedDate: "2025-11-01",
     completionDate: "2025-11-10",
     serviceLevel: "Premium",
-    Country: "Germany",
+    country: "Germany",
   },
   {
     id: 2679544,
@@ -83,7 +83,7 @@ export const OrderList = [
     expectedDate: "2023-11-01",
     completionDate: "2024-11-10",
     serviceLevel: "Premium",
-    Country: "USA",
+    country: "USA",
   },
   {
     id: 2589549,
@@ -96,6 +96,6 @@ export const OrderList = [
     expectedDate: "2024-12-01",
     completionDate: "2024-11-10",
     serviceLevel: "Premium",
-    Country: "India",
+    country: "India",
   }
 ];

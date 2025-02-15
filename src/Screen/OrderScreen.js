@@ -11,7 +11,8 @@ import OrderSave from "./order/OrderSave";
 import OrderForm from "../components/Form";
 
 const user = {
-  photo: "https://png.pngtree.com/png-clipart/20230330/ourmid/pngtree-woman-profile-silhouette-black-png-image_6660698.png",
+  photo:
+    "https://png.pngtree.com/png-clipart/20230330/ourmid/pngtree-woman-profile-silhouette-black-png-image_6660698.png",
   name: "John Doe",
   status: "online",
   email: "abc@xyz.com",
@@ -39,8 +40,9 @@ const OrderScreen = () => {
   // Filter Orders Based on Search & Filters
   const filteredOrders = orders.filter((order) => {
     return (
-      (searchValue === "" || order.company.toLowerCase().includes(searchValue.toLowerCase())) &&
-      (selectedDomicile === "All" || order.domicile === selectedDomicile) &&
+      (searchValue === "" ||
+        order.company.toLowerCase().includes(searchValue.toLowerCase())) &&
+      (selectedDomicile === "All" || order.country === selectedDomicile) &&
       (selectedCompany === "All" || order.company === selectedCompany) &&
       (selectedStatus === "All" || order.status === selectedStatus)
     );
@@ -60,10 +62,21 @@ const OrderScreen = () => {
           selectedStatus={selectedStatus}
           setSelectedStatus={setSelectedStatus}
         />
-        <Grid container spacing={2} mt={2} direction={isMobile ? "column" : "row"}>
+        <Grid
+          container
+          spacing={2}
+          mt={2}
+          direction={isMobile ? "column" : "row"}
+        >
           <Grid item xs={12} md={4}>
-            <Paper variant="outlined" sx={{ padding: 2, height: isMobile ? "auto" : "100%" }}>
-              <OrderCard orders={filteredOrders} onOrderSelect={handleOrderSelect} />
+            <Paper
+              variant="outlined"
+              sx={{ padding: 2, height: isMobile ? "auto" : "100%" }}
+            >
+              <OrderCard
+                orders={filteredOrders}
+                onOrderSelect={handleOrderSelect}
+              />
             </Paper>
           </Grid>
           <Grid item xs={12} md={8}>
@@ -80,7 +93,9 @@ const OrderScreen = () => {
                   padding: 2,
                 }}
               >
-                {orderDetails && <OrderDetailCard orderDetails={orderDetails} />}
+                {orderDetails && (
+                  <OrderDetailCard orderDetails={orderDetails} />
+                )}
                 <UserProfileCard user={user} />
               </Paper>
               <Paper variant="outlined" sx={{ padding: 2 }}>
